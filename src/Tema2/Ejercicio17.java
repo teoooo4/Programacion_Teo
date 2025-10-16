@@ -9,7 +9,7 @@ public class Ejercicio17 {
 
         System.out.print("Introduce 0 (cuadrado), 1 (rectángulo) o 2 (triángulo): ");
         int opcion = in.nextInt();
-//intenta buscar como funciona el switch
+
         switch (opcion) {
             case 0:
                 System.out.print("Introduce el lado del cuadrado: ");

@@ -13,47 +13,32 @@ public class Ejercicio15 {
         System.out.print("Introduce el año: ");
         int anio = in.nextInt();
 
-        int dias;
+        int dias = 0;
 
-        if(mes == 1 || mes ==3 || mes ==5...){
-            System.out.println("este mes tiene 31");
-        }
-        else{
-            if(mes == 4 || mes==6 ...){
-                System.out.println("este mes tiene 30 dias");
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+                System.out.println("Este mes tiene 31 días");
             }
-            else{
-                if(mes==2){
-                    if(mes%4==0 && mes%100!=0 &&....){
-                        System.out.println("tiene 28");
-                    }
-                    else{
-                        System.out.println("tiene 29");
+            else {
+                if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+                    System.out.println("Este mes tiene 30 días");
+
+                } else {
+                    if (mes == 2){
+                        if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
+                            System.out.println("Este mes tiene 28 días");
+
+                        } else {
+                            System.out.println("Este mes tiene 29 días");
+                        }
                     }
                 }
             }
-        }
 
-        switch (mes) {
-            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                dias = 31;
-                break;
-            case 4: case 6: case 9: case 11:
-                dias = 30;
-                break;
-            case 2:
-                boolean bisiesto = (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
-                dias = bisiesto ? 29 : 28;
-                break;
-            default:
-                System.out.println("Mes no válido. Debe ser un número entre 1 y 12.");
-                in.close();
-                return;
-        }
 
         System.out.printf("El mes %d del año %d tiene %d días.%n", mes, anio, dias);
 
         in.close();
+
     }
 }
 
