@@ -70,7 +70,7 @@ public class Ejercicio30 {
                     sc.nextLine();
                 }
 
-                System.out.print("¿Deseas salir de la calculadora? (si/no): ");
+                System.out.print("¿Quieres salir de la calculadora? (si/no): ");
                 salir = sc.nextLine();
 
             } else {

@@ -15,7 +15,7 @@ public class Ejercicio23 {
         numero = sc.nextInt();
 
         while (numero >= 0) {
-            suma = suma + contador;
+            suma = suma + numero;
             contador++;
 
             System.out.println("Introduce otro número:");
