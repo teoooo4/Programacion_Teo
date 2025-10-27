@@ -7,26 +7,23 @@ public class Ejercicio20 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Introduce el primer número (A): ");
+        System.out.println("Introduce un número entero:");
         int A = sc.nextInt();
 
-        System.out.print("Introduce el segundo número (B): ");
+        System.out.println("Introduce un número entero:");
         int B = sc.nextInt();
 
-        if (B > A) {
-            System.out.println("Números impares entre" + A + "y" + B + ":");
-
-            for (int i = A + 1; i < B; i++) {
-                if (i % 2!= 0) {
-                    System.out.println(i);
+        if (B < A) {
+            System.out.println("Numeros impares entre " + A + " y " + B);
+            int impares = A + 1;
+            while (impares < B) {
+                if (impares % 2 != 0) {
+                    System.out.println(impares);
                 }
+                impares++;
             }
+            sc.close();
 
-        } else {
-            System.out.println("El número B debe ser mayor que A.");
         }
-
-        sc.close();
-
     }
 }
