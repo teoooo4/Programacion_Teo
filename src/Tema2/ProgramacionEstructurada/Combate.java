@@ -98,6 +98,14 @@ public class Combate {
             if (vidafuego < 0) vidafuego = 0;
             System.out.println("Vida restante de FUEGO " + vidafuego + "\n");
 
+            // Barra de vida
+            int barrafuego = vidafuego / 5;
+            for (int i = 0; i < 20; i++) {
+                if (i < barrafuego) System.out.print("❤\uFE0F");
+                else System.out.print("-");
+            }
+            System.out.println("\n\n");
+
 
 
             // Si FUEGO muere ( <= 0 de vida) termina el combate
@@ -132,9 +140,32 @@ public class Combate {
             if (vidaagua < 0) vidaagua = 0;
             System.out.println("Vida restante de AGUA " + vidaagua + "\n");
 
+            // Barra de vida
+            int barraagua = vidaagua / 5;
+            for (int i = 0; i < 20; i++) {
+                if (i < barraagua) System.out.print("\uD83E\uDE75");
+                else System.out.print("-");
+            }
+            System.out.println("\n\n");
+
 
             // Si AGUA muere ( <= 0 de vida) termina el combate
             if (vidaagua <= 0) break;
+
+
+            //Regeneración de vida
+            int regeneracionagua = 5;
+            int regeneracionfuego = 5;
+
+            vidaagua += regeneracionagua;
+            vidafuego += regeneracionagua;
+
+            // No se puede superar la vida en 100
+            if (vidaagua > 100) vidaagua = 100;
+            if (vidafuego > 100) vidafuego = 100;
+
+            System.out.println("💧 AGUA regenera " + regeneracionagua + " puntos de vida. Vida actual: " + vidaagua);
+            System.out.println("🔥 FUEGO regenera " + regeneracionfuego + " puntos de vida. Vida actual: " + vidafuego + "\n");
 
 
 // ==================================================================================================
@@ -161,9 +192,15 @@ public class Combate {
         System.out.println("==========================================");
         if (vidaagua <= 0) {
             System.out.println("¡\uD83D\uDD25 FUEGO \uD83D\uDD25 ha ganado el combate!");
+            System.out.println("      (ง🔥_🔥)ง");
+            System.out.println("      \\_____/");
+            System.out.println("      /     \\");
 
         } else {
             System.out.println("¡\uD83D\uDCA7 AGUA \uD83D\uDCA7 ha ganado el combate!");
+            System.out.println("      ( ° - °)っ💧");
+            System.out.println("     ~~~~~~~~~~~~");
+
         }
     }
 }
