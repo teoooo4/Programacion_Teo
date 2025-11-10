@@ -51,6 +51,9 @@ public class Combate {
         int ataqueagua;
 
 
+        System.out.println("Pulsa ENTER para continuar...\n\n\n");
+        in.nextLine();
+
 
         System.out.print("===== TÚ luchador es \uD83D\uDCA7 AGUA \uD83D\uDCA7 =====\n\n\n");
 
@@ -104,6 +107,7 @@ public class Combate {
                 if (i < barrafuego) System.out.print("❤\uFE0F");
                 else System.out.print("-");
             }
+
             System.out.println("\n\n");
 
 
@@ -153,6 +157,9 @@ public class Combate {
             if (vidaagua <= 0) break;
 
 
+// ==================================================================================================
+
+
             //Regeneración de vida
             int regeneracionagua = 5;
             int regeneracionfuego = 5;
@@ -178,7 +185,7 @@ public class Combate {
 // ==================================================================================================
 
 
-            // Pausa entre rondas para que sea mas legible
+            // Pausa entre rondas para que sea mas endendible
             System.out.println("Pulsa ENTER para continuar...\n\n\n");
             in.nextLine();
 

@@ -1,3 +1,6 @@
+package T1T2T3SimulacroExamen;
+
+
 import java.util.Scanner;
 
 public class Ejercicio1 {
