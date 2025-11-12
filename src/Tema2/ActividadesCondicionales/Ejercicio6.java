@@ -7,18 +7,17 @@ public class Ejercicio6 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Introduce un número: ");
-        double numero = in.nextDouble();
+        System.out.println("Escribe el numero: ");
+        int numero = in.nextInt();
 
         if (numero > 0) {
-            System.out.println("El número es positivo.");
-        } else if (numero < 0 ) {
-            System.out.println("El número es negativo.");
-        } else {
-            System.out.println("El número es cero.");
+            System.out.println("El numero es positivo");
+
+        } else if (numero < 0) {
+            System.out.println("El numero es negativo");
+
+        } else if (numero == 0) {
+            System.out.println("El numero es zero");
         }
-
-        in.close();
-
     }
 }

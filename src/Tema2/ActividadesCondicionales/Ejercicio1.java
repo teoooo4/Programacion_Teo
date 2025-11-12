@@ -7,17 +7,18 @@ public class Ejercicio1 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Introduce el lado del cuadrado: ");
-        double lado = in.nextDouble();
+        int lado;
+        int superficie;
+        int perimetro;
 
-        double superficie = lado * lado;
+        System.out.println("Escribe el lado de un cuadrado: ");
+        lado = in.nextInt();
 
-        double perimetro = 4 * lado;
+        superficie = lado * 2;
+        perimetro = 4 * lado;
 
-        System.out.println("La superficie del cuadrado es: " + superficie);
-        System.out.println("El perimetro del cuadrado es: " + perimetro);
-
-        in.close();
+        System.out.println("La superficie es: " + superficie);
+        System.out.println("El perimetro es: " + perimetro);
 
     }
 }

@@ -7,28 +7,26 @@ public class Ejercicio4 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Introduce el primer número: ");
-        double num1 = in.nextDouble();
+        int numero1;
+        int numero2;
+        int numero3;
 
-        System.out.println("Introduce el segundo número: ");
-        double num2 = in.nextDouble();
+        System.out.print("Escribe el primer numero: ");
+        numero1 = in.nextInt();
+        System.out.print("Escribe el segundo numero: ");
+        numero2 = in.nextInt();
+        System.out.print("Escribe el tercer numero: ");
+        numero3 = in.nextInt();
 
-        System.out.println("Introduce el tercer número: ");
-        double num3 = in.nextDouble();
+        if (numero1 > numero2) {
+            System.out.println("El numero " + numero1 + " es mayor");
 
-        double mayor;
+        } else if (numero2 > numero3) {
+            System.out.println("El numero " + numero2 + " es mayor");
 
-        if (num1 >= num2 && num1 >= num3) {
-            mayor = num1;
-        } else if (num2 >= num1 && num2 >= num3) {
-            mayor = num2;
-        } else {
-            mayor = num3;
+        } else if (numero3 > numero1) {
+            System.out.println("El numero " + numero3 + " es mayor");
+
         }
-
-        System.out.println("El número mayor es: " + mayor);
-
-        in.close();
-
     }
 }

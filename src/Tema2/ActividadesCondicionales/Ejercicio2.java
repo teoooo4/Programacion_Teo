@@ -7,19 +7,21 @@ public class Ejercicio2 {
 
         Scanner in = new Scanner (System.in);
 
-        System.out.println("Introduce la base del rectángulo: ");
-        double base = in.nextDouble();
+        int base;
+        int altura;
+        int superficie;
+        int perimetro;
 
-        System.out.println("Introduce la altura del rectángulo: ");
-        double altura = in.nextDouble();
+        System.out.println("Escribe la base de un rectángulo: ");
+        base = in.nextInt();
 
-        double superficie = base * altura;
+        System.out.println("Escribe la altura de un rectángulo: ");
+        altura = in.nextInt();
 
-        double perimetro = 2 * (base + altura);
+        superficie = base * altura;
+        perimetro = (2 * altura) + (2 * base);
 
-        System.out.println("La superficie del rectángulo es: " + superficie);
-        System.out.println("El perimetro del rectángulo es: " + perimetro);
-
-        in.close();
+        System.out.println("La superficie es: " + superficie);
+        System.out.println("La perimetro es: " + perimetro);
     }
 }

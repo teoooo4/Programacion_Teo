@@ -7,28 +7,14 @@ public class Ejercicio7 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Introduce el primer número: ");
-        double num1 = in.nextDouble();
+        System.out.println("Escribe el primer numero");
+        int numero1 = in.nextInt();
 
-        System.out.println("Introduce el segundo número: ");
-        double num2 = in.nextDouble();
+        System.out.println("Escribe el segundo numero");
+        int numero2 = in.nextInt();
 
-        double resultado;
 
-        if (num1 > num2) {
-            resultado = num1 - num2;
-            System.out.println("El primero número es mayor.");
-        } else if (num2 > num1) {
-            resultado = num2 - num1;
-            System.out.println("El segundo número es mayor.");
-        } else {
-            resultado = 0;
-            System.out.println("Los dos números son iguales.");
-        }
 
-        System.out.println("El resultado de la resta es: " + resultado);
-
-        in.close();
 
     }
 }

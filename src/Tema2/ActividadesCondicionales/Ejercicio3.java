@@ -7,16 +7,19 @@ public class Ejercicio3 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Introduce la base del triángulo: ");
-        double base = in.nextDouble();
+        int base;
+        int altura;
+        int superficie;
 
-        System.out.println("Introduce la altura del triángulo: ");
-        double altura = in.nextDouble();
+        System.out.println("Escribe la base del triángulo: ");
+        base = in.nextInt();
 
-        double superficie = (base * altura) / 2;
+        System.out.println("Escribe la altura del triángulo: ");
+        altura = in.nextInt();
+
+        superficie = (base * altura) / 2;
 
         System.out.println("La superficie del triángulo es: " + superficie);
 
-        in.close();
     }
 }

@@ -7,23 +7,22 @@ public class Ejercicio5 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Introduce el primer número: ");
-        double num1 = in.nextDouble();
+        int suma;
+        int media;
 
-        System.out.println("Introduce el segundo número: ");
-        double num2 = in.nextDouble();
+        System.out.println("Escribe el primer numero: ");
+        int numero1 = in.nextInt();
 
-        System.out.println("Intorduce el tercer número: ");
-        double num3 = in.nextDouble();
+        System.out.println("Escribe el segundo numero: ");
+        int numero2 = in.nextInt();
 
-        double mediaDecimal = (num1 + num2 + num3) / 3;
+        System.out.println("Escribe el tercer numero: ");
+        int numero3 = in.nextInt();
 
-        int mediaEntera = (int) Math.round(mediaDecimal);
+        suma = numero1 + numero2 + numero3;
+        media = suma / 3;
 
-        System.out.println("La media con decimales es: " + mediaDecimal);
-        System.out.println("La media sin decimal es: " + mediaEntera);
-
-        in.close();
+        System.out.println("El resultado es: " + media);
 
     }
 }
