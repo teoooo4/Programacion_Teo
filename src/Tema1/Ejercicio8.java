@@ -4,22 +4,27 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Introduce el primer número: ");
-        int num1 = sc.nextInt();
+        int numero1;
+        int numero2;
 
-        System.out.print("Introduce el segundo número: ");
-        int num2 = sc.nextInt();
+        System.out.println("Escribe el primer numero: ");
+        numero1 = sc.nextInt();
 
-        if (num1 > num2) {
-            System.out.println("El mayor es: " + num1);
-        } else if (num2 > num1) {
-            System.out.println("El mayor es: " + num2);
+        System.out.println("Escribe el segundo numero: ");
+        numero2 = sc.nextInt();
+
+        if (numero1 == numero2) {
+            System.out.println("Son iguales");
+
+        } else if (numero1 > numero2) {
+            System.out.println("El " + numero1 + " es mayor");
+
         } else {
-            System.out.println("Los dos números son iguales. ");
-        }
+            System.out.println("El " + numero2 + " es mayor");
 
-        sc.close();
+        }
     }
 }
