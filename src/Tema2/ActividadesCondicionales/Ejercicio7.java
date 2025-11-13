@@ -13,7 +13,7 @@ public class Ejercicio7 {
         System.out.println("Escribe el segundo numero");
         int numero2 = in.nextInt();
 
-
+//HASTA AQUI ME HE QUEDADO REACIENDO LOS EJERCICIOS SIN AYUDA
 
 
     }
