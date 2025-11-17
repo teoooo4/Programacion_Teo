@@ -3,9 +3,9 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio2 {
-    public static boolean isAdult(boolean edad) {
+    public static boolean isAdult(int edad) {
 
-        return edad;
+        return edad >= 18;
     }
 
     public static void main (String[] args) {
@@ -15,7 +15,7 @@ public class Ejercicio2 {
         System.out.println("Escribe la edad: ");
         int edad = in.nextInt();
 
-        if (edad >= 18) {
+        if (isAdult(edad)) {
             System.out.println("Es mayor de edad");
 
         } else {

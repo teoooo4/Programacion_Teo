@@ -3,33 +3,35 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-    public static boolean validRadius(boolean radio) {
 
-        return radio;
+    public static boolean validRadius(double radio) {
+        return radio > 0;
     }
 
-    public static double calculateCirclePerimeter(double perimetro) {
-
-        return perimetro;
+    public static double calculateCirclePerimeter(double radio) {
+        return 2 * 3.14 * radio;
     }
 
-    public static double calculateCircleArea(double area) {
-
-        return area;
+    public static double calculateCircleArea(double radio) {
+        return 3.14 * radio * radio;
     }
-
 
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Escribe el radio: ");
-        int radio = in.nextInt();
+        System.out.print("Escribe el radio del circulo: ");
+        double radio = in.nextDouble();
 
-        double perimetro = 2 * 3.14 * radio;
-        double superficie = 3.14 * (radio * radio);
+        while (!validRadius(radio)) {
+            System.out.print("Radio inválido");
+            radio = in.nextDouble();
+        }
 
-        System.out.println("La superficie es: " + superficie + " y el perimetro: " + perimetro);
+        double perimetro = calculateCirclePerimeter(radio);
+        double area = calculateCircleArea(radio);
 
+        System.out.println("El perímetro es: " + perimetro);
+        System.out.println("La superficie es: " + area);
     }
 }

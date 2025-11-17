@@ -3,26 +3,38 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    public static int numberSign(int numero) {
+        public static int numerosigno(int numero) {
 
-        return numero;
-    }
+            if (numero > 0) {
+                return 1;
+            } else if (numero < 0) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
 
-    public static void main (String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        public static void main(String[] args) {
 
-        System.out.println("Escribe un número: ");
-        int numero = in.nextInt();
+            Scanner in = new Scanner(System.in);
 
-        if (numero > 0) {
-            System.out.println("El numero es positivo");
+            System.out.print("Escribe un numero: ");
+            int numero = in.nextInt();
 
-        } else if (numero < 0) {
-            System.out.println("El numero es negativo");
+            int signo = numerosigno(numero);
 
-        } else if (numero == 0) {
-            System.out.println("El numero es zero");
+            switch (signo) {
+                case 1:
+                    System.out.println("El numero es positivo");
+                    break;
+                case -1:
+                    System.out.println("El numero es negativo");
+                    break;
+                case 0:
+                    System.out.println("El numero es cero");
+                    break;
+
         }
     }
 }

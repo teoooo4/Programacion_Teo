@@ -3,40 +3,45 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    public static boolean showMenu(boolean menu) {
-
-        return menu;
+    public static int showMenu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1) Euro a dólar");
+        System.out.println("2) Dólar a euro");
+        return sc.nextInt();
     }
+
+    public static double euro2dollar(double euros) {
+        double exchange = 1.13955;
+        return euros * exchange;
+    }
+
+    public static double dollar2euro(double dollars) {
+        double exchange = 1.13955;
+        return dollars / exchange;
+    }
+
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("1) Euro a dolar");
-        System.out.println("2) Dolar a euro");
-        int menu = sc.nextInt();
+        int opcion = showMenu();
 
-        switch (menu) {
+        switch (opcion) {
             case 1:
-                System.out.println("Introduce los euros €");
-                int euro2dollar = sc.nextInt();
-
-                double dolar = euro2dollar * 1.13955;
-
-                System.out.println("El " + euro2dollar + "€ es en dolares " + dolar + "$");
+                System.out.print("Introduce los euros €: ");
+                double euros = sc.nextDouble();
+                System.out.println(euros + "€ son en dolares" + euro2dollar(euros) + "$");
                 break;
 
             case 2:
-                System.out.println("Introduce los dolares $");
-                int dollar2euro = sc.nextInt();
-
-                double euro = dollar2euro * 1.13955;
-
-                System.out.println("El " + dollar2euro + "$ es en euros " + euro + "€");
+                System.out.print("Introduce los dólares $: ");
+                double dollars = sc.nextDouble();
+                System.out.println(dollars + "$ son en euros" + dollar2euro(dollars) + "€");
                 break;
 
             default:
-                System.out.println("Opcion no valida");
+                System.out.println("Opción no válida");
         }
     }
 }
