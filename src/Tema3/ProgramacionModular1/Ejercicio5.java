@@ -3,22 +3,31 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio5 {
-    public static void showMultiplicationTable(int numero) {
-        System.out.println("Tabla de multiplicar de " + numero);
+    public static int multiplicar(int numero) {
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(numero + " x " + i + " = " + (numero * i));
+        int multiplicador = 1;
+        
+        while (multiplicador <= 9) {
+            multiplicador ++;
+            System.out.println(numero + " x " + multiplicador + " = " + (numero * multiplicador));
         }
+
+        return numero;
+
     }
 
 
-    public static void main(String[] args) {
+
+    public static void main (String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Escribe un número entero del 1 al 10:");
+        System.out.println("Escribe un número entero entre 1 y 10:");
         int numero = sc.nextInt();
 
-        showMultiplicationTable(numero);
+        System.out.println("Tabla de multiplicar de " + numero);
+
+        multiplicar(numero);
+
     }
 }
