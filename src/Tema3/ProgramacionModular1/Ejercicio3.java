@@ -16,22 +16,22 @@ public class Ejercicio3 {
         return 3.14 * radio * radio;
     }
 
-    public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
-
-        System.out.print("Escribe el radio del circulo: ");
-        double radio = in.nextDouble();
+    public static void areaPerimetroCirculo() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce el radio del círculo: ");
+        double radio = sc.nextDouble();
 
         while (!validRadius(radio)) {
-            System.out.print("Radio inválido");
-            radio = in.nextDouble();
+            System.out.print("Radio inválido. Introduce nuevamente: ");
+            radio = sc.nextDouble();
         }
 
-        double perimetro = calculateCirclePerimeter(radio);
-        double area = calculateCircleArea(radio);
+        System.out.println("Perímetro: " + calculateCirclePerimeter(radio));
+        System.out.println("Área: " + calculateCircleArea(radio));
+    }
 
-        System.out.println("El perímetro es: " + perimetro);
-        System.out.println("La superficie es: " + area);
+    public static void main(String[] args) {
+        areaPerimetroCirculo();
     }
 }
+

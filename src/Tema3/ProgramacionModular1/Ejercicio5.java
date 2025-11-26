@@ -3,31 +3,19 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio5 {
-    public static int multiplicar(int numero) {
 
-        int multiplicador = 1;
-        
-        while (multiplicador <= 9) {
-            multiplicador ++;
-            System.out.println(numero + " x " + multiplicador + " = " + (numero * multiplicador));
-        }
-
-        return numero;
-
-    }
-
-
-
-    public static void main (String[] args) {
-
+    public static void tablaMultiplicar() {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Escribe un número entero entre 1 y 10:");
+        System.out.print("Introduce un número para la tabla de multiplicar: ");
         int numero = sc.nextInt();
 
-        System.out.println("Tabla de multiplicar de " + numero);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
 
-        multiplicar(numero);
-
+    public static void main(String[] args) {
+        tablaMultiplicar();
     }
 }
+

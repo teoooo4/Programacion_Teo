@@ -3,12 +3,6 @@ package Tema3.ProgramacionModular1;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    public static int showMenu() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("1) Euro a dólar");
-        System.out.println("2) Dólar a euro");
-        return sc.nextInt();
-    }
 
     public static double euro2dollar(double euros) {
         double exchange = 1.13955;
@@ -20,28 +14,32 @@ public class Ejercicio4 {
         return dollars / exchange;
     }
 
-
-    public static void main(String[] args) {
-
+    public static void conversorMoneda() {
         Scanner sc = new Scanner(System.in);
-
-        int opcion = showMenu();
+        System.out.println("1) Euro a dólar");
+        System.out.println("2) Dólar a euro");
+        System.out.print("Elige una opción: ");
+        int opcion = sc.nextInt();
 
         switch (opcion) {
             case 1:
-                System.out.print("Introduce los euros €: ");
+                System.out.print("Introduce los euros: ");
                 double euros = sc.nextDouble();
-                System.out.println(euros + "€ son en dolares" + euro2dollar(euros) + "$");
+                System.out.println(euros + "€ son " + euro2dollar(euros) + "$");
                 break;
-
             case 2:
-                System.out.print("Introduce los dólares $: ");
+                System.out.print("Introduce los dólares: ");
                 double dollars = sc.nextDouble();
-                System.out.println(dollars + "$ son en euros" + dollar2euro(dollars) + "€");
+                System.out.println(dollars + "$ son " + dollar2euro(dollars) + "€");
                 break;
-
             default:
                 System.out.println("Opción no válida");
+                break;
         }
     }
+
+    public static void main(String[] args) {
+        conversorMoneda();
+    }
 }
+
