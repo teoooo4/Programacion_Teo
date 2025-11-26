@@ -2,6 +2,7 @@ package Tema3.ProgramacionModular2;
 
 public class MyMath {
 
+
 // ---------- 1.1 Círculo ----------
     public static double circlePerimeter(double r) {
         return 2 * Math.PI * r;
@@ -10,6 +11,7 @@ public class MyMath {
     public static double circleArea(double r) {
         return Math.PI * r * r;
     }
+
 
 // ---------- 1.2 Cuadrado ----------
     public static double squarePerimeter(double lado) {
@@ -20,6 +22,7 @@ public class MyMath {
         return lado * lado;
     }
 
+
 // ---------- 1.3 Rectángulo ----------
     public static double rectanglePerimeter(double base, double altura) {
         return 2 * (base + altura);
@@ -28,6 +31,7 @@ public class MyMath {
     public static double rectangleArea(double base, double altura) {
         return base * altura;
     }
+
 
 // ---------- 2. Primo / No primo ----------
     public static boolean isPrime(int n) {
@@ -42,6 +46,7 @@ public class MyMath {
         return !isPrime(n); // Reutiliza el método anterior
     }
 
+
 // ---------- 3. Número de dígitos ----------
     public static int numDigits(int n) {
         n = Math.abs(n);
@@ -53,6 +58,7 @@ public class MyMath {
         }
         return count;
     }
+
 
 // ---------- 4. Dígitos pares ----------
     public static int evenDigits(int n) {
@@ -66,6 +72,7 @@ public class MyMath {
         return count;
     }
 
+
 // ---------- 5. Dígitos impares ----------
     public static int oddDigits(int n) {
         n = Math.abs(n);
@@ -78,6 +85,7 @@ public class MyMath {
         return count;
     }
 
+
 // ---------- 6. Factorial iterativo ----------
     public static long factorial(int n) {
         long fact = 1;
@@ -87,11 +95,13 @@ public class MyMath {
         return fact;
     }
 
+
 // ---------- 7. Factorial recursivo ----------
     public static long factorialRecursive(int n) {
         if (n <= 1) return 1;
         return n * factorialRecursive(n - 1);
     }
+
 
 // ---------- 8. Número de soluciones de ecuación cuadrática ----------
     public static int quadraticSolutions(double a, double b, double c) {
@@ -100,6 +110,7 @@ public class MyMath {
         else if (D == 0) return 1;
         else return 0;
     }
+
 
 // ---------- 9. Suma de dígitos ----------
     public static int sumDigits(int n) {

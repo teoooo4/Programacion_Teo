@@ -6,7 +6,7 @@ public class Ejercicio10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("--- MyMath Test ---");
+        System.out.println("----- MyMath -----");
 
 // ---------- 1.1 Círculo ----------
         System.out.print("Radio del círculo: ");
@@ -45,11 +45,13 @@ public class Ejercicio10 {
         System.out.println("Dígitos impares: " + MyMath.oddDigits(num));
         System.out.println("Suma de dígitos: " + MyMath.sumDigits(num));
 
+
 // ---------- 6,7 Factorial ----------
         System.out.print("\nNúmero para factorial: ");
         num = sc.nextInt();
         System.out.println("Factorial iterativo: " + MyMath.factorial(num));
         System.out.println("Factorial recursivo: " + MyMath.factorialRecursive(num));
+
 
 // ---------- 8. Ecuación cuadrática----------
         System.out.println("\nEcuación ax^2 + bx + c = 0");
