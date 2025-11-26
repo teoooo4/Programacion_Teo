@@ -37,7 +37,7 @@ public class Ejercicio10 {
         System.out.println(num + (MyMath.isPrime(num) ? " es primo" : " no es primo"));
 
 
-// ---------- 3,4,5,9 Dígitos ----------
+// ---------- 3, 4, 5, 9 Dígitos ----------
         System.out.print("\nNúmero para análisis de dígitos: ");
         num = sc.nextInt();
         System.out.println("Número de dígitos: " + MyMath.numDigits(num));
@@ -46,7 +46,7 @@ public class Ejercicio10 {
         System.out.println("Suma de dígitos: " + MyMath.sumDigits(num));
 
 
-// ---------- 6,7 Factorial ----------
+// ---------- 6, 7 Factorial ----------
         System.out.print("\nNúmero para factorial: ");
         num = sc.nextInt();
         System.out.println("Factorial iterativo: " + MyMath.factorial(num));
