@@ -13,14 +13,14 @@ public class AtrapaMosca {
         boolean atrapada = false;
 
         System.out.println("¡Bienvenido a Atrapa a la Mosca!");
-        System.out.println("Elige una posición entre 1 y 15.");
+        System.out.println("Elige una posición entre 1 y 15");
 
         while (!atrapada) {
             System.out.print("Tu elección: ");
             int eleccion = sc.nextInt() - 1;
 
             if (eleccion == mosca) {
-                System.out.println("¡Felicidades! Has atrapado a la mosca.");
+                System.out.println("¡Felicidades! Has atrapado a la mosca");
                 atrapada = true;
             } else if (eleccion == mosca - 1 || eleccion == mosca + 1) {
 

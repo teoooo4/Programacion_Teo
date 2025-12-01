@@ -10,7 +10,7 @@ public class WifiHotel {
 
         System.out.println("Simulación de cobertura WiFi en hotel (20 habitaciones)");
 
-        System.out.print("Número de habitación (1-20): ");
+        System.out.print("Número de la habitación (1-20): ");
         int router = sc.nextInt() - 1;
 
         System.out.print("Potencia del router (1-6): ");

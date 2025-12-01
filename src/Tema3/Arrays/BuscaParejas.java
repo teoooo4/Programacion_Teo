@@ -28,13 +28,13 @@ public class BuscaParejas {
         System.out.println("¡Buscar Parejas!");
 
         while (parejasEncontradas < 10) {
-            System.out.print("Elige primera posición (1-20): ");
+            System.out.print("Elige la primera posición (1-20): ");
             int p1 = sc.nextInt() - 1;
-            System.out.print("Elige segunda posición (1-20): ");
+            System.out.print("Elige la segunda posición (1-20): ");
             int p2 = sc.nextInt() - 1;
 
             if (p1 == p2) {
-                System.out.println("Debes elegir posiciones diferentes.");
+                System.out.println("Debes elegir posiciones diferentes");
                 continue;
             }
 
@@ -47,11 +47,11 @@ public class BuscaParejas {
                 visibles[p2] = true;
                 parejasEncontradas++;
             } else {
-                System.out.println("No es pareja.");
+                System.out.println("No es pareja");
             }
             System.out.println();
         }
 
-        System.out.println("¡Felicidades! Has encontrado todas las parejas.");
+        System.out.println("¡Felicidades! Has encontrado todas las parejas");
     }
 }

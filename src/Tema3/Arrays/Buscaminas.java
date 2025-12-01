@@ -41,17 +41,17 @@ public class Buscaminas {
             int pos = sc.nextInt() - 1;
 
             if (tablero[pos] == -1) {
-                System.out.println("¡BOOM! Pisaste una mina.");
+                System.out.println("¡BOOM! Pisaste una mina");
                 juegoActivo = false;
             } else {
                 if (!visibles[pos]) {
                     visibles[pos] = true;
                     descubiertas++;
                 }
-                System.out.println("Valor en posición " + (pos+1) + ": " + tablero[pos]);
+                System.out.println("Valor a la posición " + (pos+1) + ": " + tablero[pos]);
 
                 if (descubiertas == casillasSeguras) {
-                    System.out.println("¡Ganaste! Has descubierto todas las casillas seguras.");
+                    System.out.println("¡Ganaste! Has descubierto todas las casillas seguras");
                     juegoActivo = false;
                 }
             }

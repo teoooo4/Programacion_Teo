@@ -151,69 +151,83 @@ public class MyArray {
                 case 1:
                     vectorA = leerVector(sc);
                     break;
+
                 case 2:
                     vectorB = leerVector(sc);
                     break;
+
                 case 3:
                     if (vectorA != null) imprimir(vectorA);
-                    else System.out.println("Vector A no definido.");
+                    else System.out.println("Vector A no definido");
                     break;
+
                 case 4:
                     if (vectorA != null) System.out.println("Máximo: " + maximo(vectorA));
-                    else System.out.println("Vector A no definido.");
+                    else System.out.println("Vector A no definido");
                     break;
+
                 case 5:
                     if (vectorA != null) System.out.println("Mínimo: " + minimo(vectorA));
-                    else System.out.println("Vector A no definido.");
+                    else System.out.println("Vector A no definido");
                     break;
+
                 case 6:
                     if (vectorA != null) System.out.println("Media: " + media(vectorA));
-                    else System.out.println("Vector A no definido.");
+                    else System.out.println("Vector A no definido");
                     break;
+
                 case 7:
                     if (vectorA != null) {
-                        System.out.print("Número a buscar: ");
+                        System.out.print("Número para buscar: ");
                         int num = sc.nextInt();
-                        System.out.println("¿Existe? " + existe(vectorA, num));
-                    } else System.out.println("Vector A no definido.");
+                        System.out.println("El número existe? " + existe(vectorA, num));
+                    } else System.out.println("Vector A no definido");
                     break;
+
                 case 8:
                     if (vectorA != null && vectorB != null) {
                         imprimir(sumar(vectorA, vectorB));
-                    } else System.out.println("Debes definir ambos vectores.");
+                    } else System.out.println("Tienes que definir ambos vectores");
                     break;
+
                 case 9:
                     if (vectorA != null && vectorB != null) {
                         imprimir(restar(vectorA, vectorB));
-                    } else System.out.println("Debes definir ambos vectores.");
+                    } else System.out.println("Tienes que definir ambos vectores");
                     break;
+
                 case 10:
                     if (vectorA != null && vectorB != null) {
                         System.out.println("Producto escalar: " + productoEscalar(vectorA, vectorB));
-                    } else System.out.println("Debes definir ambos vectores.");
+                    } else System.out.println("Tienes que definir ambos vectores");
                     break;
+
                 case 11:
                     if (vectorA != null) {
                         imprimir(invertir(vectorA));
-                    } else System.out.println("Vector A no definido.");
+                    } else System.out.println("Vector A no definido");
                     break;
+
                 case 12:
                     if (vectorA != null) {
                         invertirEnSitio(vectorA);
                         System.out.println("Vector A invertido en sitio:");
                         imprimir(vectorA);
-                    } else System.out.println("Vector A no definido.");
+                    } else System.out.println("Vector A no definido");
                     break;
+
                 case 13:
                     if (vectorA != null) {
-                        System.out.println("¿Capicúa? " + esCapicua(vectorA));
-                    } else System.out.println("Vector A no definido.");
+                        System.out.println("Cual es la capicúa? " + esCapicua(vectorA));
+                    } else System.out.println("Vector A no definido");
                     break;
+
                 case 0:
                     System.out.println("Saliendo...");
                     break;
+
                 default:
-                    System.out.println("Opción no válida.");
+                    System.out.println("Opción no válida");
             }
 
         } while (opcion != 0);
@@ -224,7 +238,7 @@ public class MyArray {
         System.out.print("Tamaño del vector: ");
         int n = sc.nextInt();
         int[] v = new int[n];
-        System.out.println("Introduce los elementos:");
+        System.out.println("Introduce los vectores:");
         for (int i = 0; i < n; i++) {
             v[i] = sc.nextInt();
         }
